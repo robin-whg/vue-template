@@ -3,6 +3,7 @@
     "johnsoncodehk.volar",
     "cpylua.language-postcss",
     "bradlc.vscode-tailwindcss",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify"
   ]
 }
