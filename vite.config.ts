@@ -1,6 +1,6 @@
+import path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import path from "path";
 import Pages from "vite-plugin-pages";
 import Layouts from "vite-plugin-vue-layouts";
 import IconsResolver from "unplugin-icons/resolver";
@@ -25,7 +25,7 @@ export default defineConfig({
       dts: "src/components.d.ts",
       deep: true,
       directoryAsNamespace: true,
-      resolvers: [IconsResolver(), HeadlessUiResolver({ prefix: "headless" })],
+      resolvers: [IconsResolver(), HeadlessUiResolver({ prefix: "h" })],
       dirs: ["src/components", "src/pages/*/components"],
     }),
     Icons(),
