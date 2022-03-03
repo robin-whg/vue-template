@@ -7,6 +7,11 @@ declare module 'vue' {
     BaseButton: typeof import('./components/BaseButton.vue')['default']
     BaseSpinner: typeof import('./components/BaseSpinner.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    IHeroiconsOutlineCloudUpload: typeof import('~icons/heroicons-outline/cloud-upload')['default']
+    IHeroiconsOutlineHome: typeof import('~icons/heroicons-outline/home')['default']
+    IHeroiconsOutlineSearch: typeof import('~icons/heroicons-outline/search')['default']
+    IHeroiconsSolidBeaker: typeof import('~icons/heroicons-solid/beaker')['default']
+    IHeroiconsSolidSearch: typeof import('~icons/heroicons-solid/search')['default']
   }
 }
 
