@@ -7,8 +7,8 @@ import IconsResolver from "unplugin-icons/resolver";
 import Components from "unplugin-vue-components/vite";
 import { HeadlessUiResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
+import AutoImport from "unplugin-auto-import/vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
@@ -25,9 +25,16 @@ export default defineConfig({
       dts: "src/components.d.ts",
       deep: true,
       directoryAsNamespace: true,
-      resolvers: [IconsResolver(), HeadlessUiResolver({ prefix: "h" })],
+      resolvers: [IconsResolver(), HeadlessUiResolver({ prefix: "H" })],
       dirs: ["src/components", "src/pages/*/components"],
     }),
     Icons(),
+    AutoImport({
+      imports: ["vue", "vue-router", "@vueuse/head", "@vueuse/core"],
+      dts: "src/auto-imports.d.ts",
+    }),
   ],
+  optimizeDeps: {
+    include: ["vue", "vue-router", "@vueuse/core", "@vueuse/head"],
+  },
 });
