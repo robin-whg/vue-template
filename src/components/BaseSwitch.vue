@@ -16,7 +16,7 @@ const emit = defineEmits<{
 <template>
   <h-switch
     :value="modelValue"
-    class="flex items-center gap-2 overflow-hidden truncate rounded-lg py-2 text-sm font-medium text-zinc-700 disabled:opacity-50 dark:text-zinc-200"
+    class="group flex items-center gap-2 rounded-lg py-2 text-sm font-medium text-zinc-700 focus:outline-none disabled:opacity-50 dark:text-zinc-200"
     :title="label"
     @click="emit('update:modelValue', !modelValue)"
   >
@@ -24,9 +24,9 @@ const emit = defineEmits<{
       :class="
         modelValue
           ? 'border-primary bg-primary'
-          : 'border-zinc-400 bg-zinc-400 dark:border-zinc-600 dark:bg-zinc-600'
+          : 'border-zinc-300 bg-zinc-300 dark:border-zinc-600 dark:bg-zinc-600'
       "
-      class="relative inline-flex h-5 w-9 flex-shrink-0 items-center rounded-full border transition duration-100 ease-in-out motion-reduce:transition-none"
+      class="relative inline-flex h-5 w-9 flex-shrink-0 items-center rounded-full border transition duration-100 ease-in-out group-focus:ring group-focus:ring-primary/50 motion-reduce:transition-none"
     >
       <span
         aria-hidden="true"
