@@ -7,7 +7,7 @@ interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {
   as: "button",
-  variant: "primary",
+  variant: "secondary",
   loading: false,
   icon: false,
 });
