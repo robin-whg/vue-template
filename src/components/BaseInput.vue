@@ -38,7 +38,7 @@ function updateInput(event: Event) {
     <input
       :value="modelValue"
       v-bind="$attrs"
-      class="rounded-lg border bg-white px-4 py-2 text-sm transition duration-150 ease-in-out placeholder:text-zinc-400 focus:border-transparent focus:outline-none focus:ring disabled:cursor-not-allowed disabled:opacity-75 motion-reduce:transition-none dark:bg-zinc-900 dark:placeholder:text-zinc-500"
+      class="rounded-lg border bg-white px-4 py-2 text-sm transition duration-150 ease-in-out placeholder:text-zinc-400 hover:bg-zinc-100 focus:border-transparent focus:outline-none focus:ring disabled:opacity-50 motion-reduce:transition-none dark:bg-zinc-900 dark:placeholder:text-zinc-500 dark:hover:bg-zinc-800"
       :class="[
         error
           ? 'border-red-500  caret-red-500 focus:ring-red-500/50'
