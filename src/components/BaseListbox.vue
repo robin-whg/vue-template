@@ -33,11 +33,11 @@ watch(localModelValue, (value) => {
     >
     <div class="relative">
       <h-listbox-button
-        class="relative inline-flex w-full items-center justify-between rounded-lg border bg-white px-4 py-2 text-sm font-medium text-zinc-700 transition duration-100 ease-in-out hover:bg-zinc-100 focus:border-transparent focus:outline-none focus:ring disabled:opacity-50 motion-reduce:transition-none dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus:border-transparent"
+        class="relative inline-flex w-full items-center justify-between rounded-lg border bg-white px-4 py-2 text-sm font-medium text-zinc-700 transition duration-100 ease-in-out hover:bg-zinc-100 focus-visible:border-transparent focus-visible:outline-none focus-visible:ring disabled:opacity-50 motion-reduce:transition-none dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:border-transparent"
         :class="[
           error
-            ? 'border-red-500   focus:ring-red-500/50'
-            : 'border-zinc-300  focus:ring-primary/50 dark:border-zinc-600',
+            ? 'border-red-500   focus-visible:ring-red-500/50'
+            : 'border-zinc-300  focus-visible:ring-primary/50 dark:border-zinc-600',
         ]"
         >{{ modelValue }}
         <i-heroicons-solid-selector
@@ -45,7 +45,7 @@ watch(localModelValue, (value) => {
         />
       </h-listbox-button>
       <h-listbox-options
-        class="absolute mt-1 w-full divide-y overflow-hidden rounded-lg border border-zinc-300 bg-white focus:outline-none dark:border-zinc-600 dark:bg-zinc-900"
+        class="absolute mt-1 w-full divide-y overflow-hidden rounded-lg border border-zinc-300 bg-white focus-visible:outline-none dark:border-zinc-600 dark:bg-zinc-900"
         :class="[
           error
             ? 'divide-red-500 border-red-500'
