@@ -30,11 +30,11 @@ export default defineConfig({
     }),
     Icons(),
     AutoImport({
-      imports: ["vue", "vue-router", "@vueuse/head", "@vueuse/core"],
+      imports: ["vue", "vue-router", "@vueuse/head", "@vueuse/core", "pinia"],
       dts: "src/auto-imports.d.ts",
     }),
   ],
   optimizeDeps: {
-    include: ["vue", "vue-router", "@vueuse/core", "@vueuse/head"],
+    include: ["vue", "vue-router", "@vueuse/core", "@vueuse/head", "pinia"],
   },
 });
